@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect } from "react";
 import { Reveal } from "../components/Reveal";
+import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { updateSEO } from "../lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -149,6 +150,48 @@ function Index() {
               <Link to="/about" className="arrow-cta">Read about the program →</Link>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS */}
+      <section style={{ background: "#EDF7F0", padding: "80px 0" }}>
+        <div className="mx-auto max-w-[1400px] px-6 md:px-10">
+          <Reveal>
+            <div className="text-center">
+              <div className="gold-label">WHAT BUILDERS SAY</div>
+              <h2
+                className="mx-auto mt-4"
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
+                  color: "#1B4332",
+                  fontSize: 42,
+                  lineHeight: 1.15,
+                  maxWidth: 720,
+                }}
+              >
+                Hear from our previous cohort
+              </h2>
+              <p
+                className="mx-auto mt-4"
+                style={{
+                  fontWeight: 300,
+                  color: "#555",
+                  fontSize: 17,
+                  lineHeight: 1.7,
+                  maxWidth: 640,
+                }}
+              >
+                Real builders. Real results. Real testimonials from those who completed the program.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-16">
+            <Reveal delay={200}>
+              <TestimonialsCarousel />
+            </Reveal>
+          </div>
         </div>
       </section>
     </>
