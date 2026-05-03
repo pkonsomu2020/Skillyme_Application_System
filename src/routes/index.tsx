@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Reveal } from "../components/Reveal";
+import { updateSEO } from "../lib/seo";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -30,6 +32,16 @@ function Stat({ n, label }: { n: string; label: string }) {
 }
 
 function Index() {
+  useEffect(() => {
+    updateSEO({
+      title: "Skillyme Africa — Track One | Apply Now",
+      description: "A 6-week competitive sprint for African professionals. Real product. Real buyers. Real stakes. 100 spots. Applications close May 14, 2026.",
+      keywords: "Skillyme Africa, Track One, African professionals, builder program, Kenya, tech training",
+      canonical: "https://apply.skillyme.africa/",
+      ogImage: "https://apply.skillyme.africa/assets/skillyme-logo.png",
+    });
+  }, []);
+
   return (
     <>
       {/* HERO */}
