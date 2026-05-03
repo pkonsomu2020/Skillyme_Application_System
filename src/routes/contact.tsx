@@ -175,18 +175,6 @@ function FaqSection() {
 }
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact — Skillyme Africa" },
-      {
-        name: "description",
-        content:
-          "Get in touch with the Skillyme Africa team. Email africaskillyme@gmail.com or send us a message — we reply within one working day.",
-      },
-      { property: "og:title", content: "Contact Skillyme Africa" },
-      { property: "og:description", content: "africaskillyme@gmail.com · Nairobi · Mon–Fri 9:00–18:00 EAT" },
-    ],
-  }),
   component: ContactPage,
 });
 

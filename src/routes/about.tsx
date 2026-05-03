@@ -2,18 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/Reveal";
 
 export const Route = createFileRoute("/about")({
-  head: () => ({
-    meta: [
-      { title: "About — Skillyme Africa" },
-      {
-        name: "description",
-        content:
-          "Skillyme Africa exists because talented African professionals have never had a room where the stakes were real. Track One is that room.",
-      },
-      { property: "og:title", content: "About Skillyme Africa — Built for the builders Africa keeps overlooking." },
-      { property: "og:description", content: "Why Track One exists, who it's for, and what makes it different." },
-    ],
-  }),
   component: AboutPage,
 });
 

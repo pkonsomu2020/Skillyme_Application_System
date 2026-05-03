@@ -2,18 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/Reveal";
 
 export const Route = createFileRoute("/projects")({
-  head: () => ({
-    meta: [
-      { title: "The Five Projects — Skillyme Africa" },
-      {
-        name: "description",
-        content:
-          "Five real African industries. Five real problems. Ten competing teams. Choose the project that matches your background and apply.",
-      },
-      { property: "og:title", content: "The Five Projects — Skillyme Africa Track One" },
-      { property: "og:description", content: "Agriculture. Logistics. Health. Energy. Finance. Pick yours." },
-    ],
-  }),
   component: ProjectsPage,
 });
 

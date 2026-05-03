@@ -3,18 +3,6 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal } from "../components/Reveal";
 
 export const Route = createFileRoute("/apply")({
-  head: () => ({
-    meta: [
-      { title: "Apply — Skillyme Africa Track One" },
-      {
-        name: "description",
-        content:
-          "Apply to Skillyme Africa Track One. 10–15 minutes. Ksh 5,000 paid only after acceptance. Applications close May 14, 2026.",
-      },
-      { property: "og:title", content: "Apply — Skillyme Africa Track One" },
-      { property: "og:description", content: "Selective. Fast. Honest. 100 spots. Closes May 14, 2026." },
-    ],
-  }),
   component: ApplyPage,
 });
 
