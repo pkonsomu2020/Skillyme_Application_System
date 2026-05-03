@@ -30,3 +30,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Documentation (local only)
+GOOGLE_INDEXING_GUIDE.md
