@@ -2,21 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/Reveal";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "Skillyme Africa — Track One | Apply Now" },
-      {
-        name: "description",
-        content:
-          "A 6-week competitive sprint for African professionals. Real product. Real buyers. Real stakes. 100 spots. Applications close May 14, 2026.",
-      },
-      { property: "og:title", content: "Skillyme Africa — Where African talent stops preparing and starts building." },
-      {
-        property: "og:description",
-        content: "Track One · May 2026 · 100 spots. 5 industries. 6 weeks. One Gala in July.",
-      },
-    ],
-  }),
   component: Index,
 });
 
