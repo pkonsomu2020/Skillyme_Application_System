@@ -2,6 +2,18 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/Reveal";
 
 export const Route = createFileRoute("/projects")({
+  head: () => ({
+    meta: [
+      { title: "The Five Projects — Skillyme Africa" },
+      {
+        name: "description",
+        content:
+          "Five real African industries. Five real problems. Ten competing teams. Choose the project that matches your background and apply.",
+      },
+      { property: "og:title", content: "The Five Projects — Skillyme Africa Track One" },
+      { property: "og:description", content: "Agriculture. Logistics. Health. Energy. Finance. Pick yours." },
+    ],
+  }),
   component: ProjectsPage,
 });
 
@@ -84,8 +96,8 @@ function ProjectCard({ p }: { p: (typeof projects)[number] }) {
       }}
       onMouseEnter={(e) => {
         const el = e.currentTarget as HTMLElement;
-        el.style.borderColor = "#D4AF37";
-        el.style.boxShadow = "0 0 0 1px #D4AF37";
+        el.style.borderColor = "#1DB8A0";
+        el.style.boxShadow = "0 0 0 1px #1DB8A0";
       }}
       onMouseLeave={(e) => {
         const el = e.currentTarget as HTMLElement;
@@ -95,19 +107,19 @@ function ProjectCard({ p }: { p: (typeof projects)[number] }) {
     >
       <div className="flex items-baseline justify-between">
         <div className="gold-label">{p.industry}</div>
-        <div style={{ fontFamily: "var(--font-display)", color: "#D4AF37", fontWeight: 700, fontSize: 36, lineHeight: 1 }}>
+        <div style={{ fontFamily: "var(--font-display)", color: "#1DB8A0", fontWeight: 700, fontSize: 36, lineHeight: 1 }}>
           {p.n}
         </div>
       </div>
       <h3
         className="mt-6"
-        style={{ fontFamily: "var(--font-display)", color: "#1B4332", fontWeight: 600, fontSize: 28, lineHeight: 1.2 }}
+        style={{ fontFamily: "var(--font-display)", color: "#0D1E2C", fontWeight: 600, fontSize: 28, lineHeight: 1.2 }}
       >
         {p.title}
       </h3>
       <p
         className="mt-4"
-        style={{ fontFamily: "var(--font-display)", color: "#1B4332", fontStyle: "italic", fontWeight: 600, fontSize: 18, lineHeight: 1.4 }}
+        style={{ fontFamily: "var(--font-display)", color: "#0D1E2C", fontStyle: "italic", fontWeight: 600, fontSize: 18, lineHeight: 1.4 }}
       >
         {p.hook}
       </p>
@@ -117,13 +129,13 @@ function ProjectCard({ p }: { p: (typeof projects)[number] }) {
       <ul className="mt-6 grow space-y-3">
         {p.outcomes.map((o) => (
           <li key={o} className="flex gap-3" style={{ color: "#111", fontWeight: 300, fontSize: 14.5, lineHeight: 1.6 }}>
-            <span style={{ color: "#D4AF37", fontWeight: 700, lineHeight: 1.6 }}>•</span>
+            <span style={{ color: "#1DB8A0", fontWeight: 700, lineHeight: 1.6 }}>•</span>
             <span>{o}</span>
           </li>
         ))}
       </ul>
       <div className="mt-8 flex justify-end">
-        <Link to="/apply" className="arrow-cta arrow-cta-dark" style={{ color: "#1B4332" }}>
+        <Link to="/apply" className="arrow-cta arrow-cta-dark" style={{ color: "#0D1E2C" }}>
           Choose this project →
         </Link>
       </div>
@@ -153,7 +165,7 @@ function ProjectsPage() {
           </h1>
           <p
             className="anim-slide-up delay-400 city-text mt-6"
-            style={{ color: "#D8F3DC", fontWeight: 300, fontSize: 18, maxWidth: 640, lineHeight: 1.6 }}
+            style={{ color: "#E8F4F2", fontWeight: 300, fontSize: 18, maxWidth: 640, lineHeight: 1.6 }}
           >
             Read each project. Choose the one that matches your background and your network.
             You will indicate your first and second preference when you apply.
@@ -174,12 +186,11 @@ function ProjectsPage() {
 
       {/* BOTTOM CTA BAR */}
       <section
-        className="city-section flex flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-20"
+        className="city-light flex flex-col items-start justify-between gap-6 px-6 md:flex-row md:items-center md:px-20"
         style={{ minHeight: 180, padding: "60px 40px" }}
       >
         <h3
-          className="city-heading"
-          style={{ fontFamily: "var(--font-display)", color: "#fff", fontWeight: 600, fontSize: 30 }}
+          style={{ fontFamily: "var(--font-display)", color: "#0D1E2C", fontWeight: 700, fontSize: 30 }}
         >
           Found your project? Apply now.
         </h3>

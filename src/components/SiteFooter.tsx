@@ -5,7 +5,7 @@ export function SiteFooter() {
     <footer
       className="city-section city-overlay-deep"
       style={{
-        borderTop: "1px solid rgba(212,175,55,0.25)",
+        borderTop: "1px solid rgba(29, 184, 160,0.25)",
         padding: "40px 24px",
       }}
     >
@@ -14,19 +14,19 @@ export function SiteFooter() {
           <img
             src="/assets/skillyme-logo.png"
             alt="Skillyme Africa"
-            style={{ height: 32, width: "auto", opacity: 0.85, marginBottom: 8, display: "block", mixBlendMode: "lighten" }}
+            style={{ height: 48, width: "auto", marginBottom: 10, display: "block", imageRendering: "auto" }}
           />
-          <div style={{ fontFamily: "var(--font-body)", fontWeight: 300, color: "#95D5B2", fontSize: 13 }}>
+          <div style={{ fontFamily: "var(--font-body)", fontWeight: 300, color: "#1DB8A0", fontSize: 13 }}>
             Track One — 2026
           </div>
-          <p className="mt-3 text-[14px]" style={{ color: "#D8F3DC", fontWeight: 300, lineHeight: 1.7 }}>
+          <p className="mt-3 text-[14px]" style={{ color: "#E8F4F2", fontWeight: 300, lineHeight: 1.7 }}>
             A 6-week competitive builder program for African professionals. Track One launches May 2026.
           </p>
         </div>
 
         <div>
           <div className="gold-label mb-4">Navigate</div>
-          <ul className="space-y-2 text-[14px]" style={{ color: "#D8F3DC", fontWeight: 300 }}>
+          <ul className="space-y-2 text-[14px]" style={{ color: "#E8F4F2", fontWeight: 300 }}>
             <li><Link to="/" className="story-link">Home</Link></li>
             <li><Link to="/about" className="story-link">About</Link></li>
             <li><Link to="/projects" className="story-link">Projects</Link></li>
@@ -37,7 +37,7 @@ export function SiteFooter() {
 
         <div>
           <div className="gold-label mb-4">Contact</div>
-          <p className="text-[14px]" style={{ color: "#D8F3DC", fontWeight: 300, lineHeight: 1.8 }}>
+          <p className="text-[14px]" style={{ color: "#E8F4F2", fontWeight: 300, lineHeight: 1.8 }}>
             africaskillyme@gmail.com<br />
             +254 745 266 526<br />
             Nairobi, Kenya<br />
@@ -48,12 +48,12 @@ export function SiteFooter() {
 
       <div
         className="mx-auto mt-12 flex max-w-[1400px] flex-col items-start justify-between gap-3 border-t pt-6 md:flex-row md:items-center"
-        style={{ borderColor: "rgba(212,175,55,0.2)" }}
+        style={{ borderColor: "rgba(29, 184, 160,0.2)" }}
       >
-        <div className="text-[12px]" style={{ color: "#D8F3DC", letterSpacing: "0.08em" }}>
+        <div className="text-[12px]" style={{ color: "#E8F4F2", letterSpacing: "0.08em" }}>
           © {new Date().getFullYear()} SKILLYME AFRICA · ALL RIGHTS RESERVED
         </div>
-        <div className="text-[12px]" style={{ color: "#D8F3DC", fontStyle: "italic", fontWeight: 300 }}>
+        <div className="text-[12px]" style={{ color: "#E8F4F2", fontStyle: "italic", fontWeight: 300 }}>
           The work speaks for itself.
         </div>
       </div>

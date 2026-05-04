@@ -31,10 +31,10 @@ export function SiteNav() {
         className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
         style={{
           height: 64,
-          background: scrolled ? "#1B4332" : "rgba(10, 20, 14, 0.55)",
+          background: scrolled ? "#0D1E2C" : "rgba(13, 30, 44, 0.60)",
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)",
-          borderBottom: scrolled ? "1px solid rgba(212,175,55,0.3)" : "1px solid transparent",
+          borderBottom: scrolled ? "1px solid rgba(29, 184, 160,0.3)" : "1px solid transparent",
         }}
       >
         <div className="mx-auto flex h-full max-w-[1400px] items-center justify-between px-6 md:px-10">
@@ -42,7 +42,7 @@ export function SiteNav() {
             <img
               src="/assets/skillyme-logo.png"
               alt="Skillyme Africa"
-              style={{ height: 36, width: "auto", verticalAlign: "middle", display: "block", mixBlendMode: "lighten" }}
+              style={{ height: 40, width: "auto", display: "block", imageRendering: "auto" }}
             />
           </Link>
 
@@ -55,12 +55,12 @@ export function SiteNav() {
                   to={l.to}
                   className="text-[14px] transition-colors duration-200"
                   style={{
-                    color: active ? "#D4AF37" : "#fff",
+                    color: active ? "#1DB8A0" : "#fff",
                     letterSpacing: "0.05em",
-                    borderBottom: active ? "2px solid #D4AF37" : "2px solid transparent",
+                    borderBottom: active ? "2px solid #1DB8A0" : "2px solid transparent",
                     paddingBottom: 2,
                   }}
-                  onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLElement).style.color = "#D4AF37"; }}
+                  onMouseEnter={(e) => { if (!active) (e.currentTarget as HTMLElement).style.color = "#1DB8A0"; }}
                   onMouseLeave={(e) => { if (!active) (e.currentTarget as HTMLElement).style.color = "#fff"; }}
                 >
                   {l.label}
@@ -77,7 +77,7 @@ export function SiteNav() {
             className="md:hidden"
             aria-label="Open menu"
             onClick={() => setOpen(true)}
-            style={{ color: "#D4AF37" }}
+            style={{ color: "#1DB8A0" }}
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="3" y1="6" x2="21" y2="6" />
@@ -92,7 +92,7 @@ export function SiteNav() {
         <div
           className="fixed inset-0 z-[100] flex flex-col items-center justify-center gap-8 md:hidden"
           style={{
-            background: "rgba(10, 20, 14, 0.97)",
+            background: "rgba(13, 30, 44, 0.97)",
             backdropFilter: "blur(20px)",
           }}
         >
@@ -100,7 +100,7 @@ export function SiteNav() {
             className="absolute right-6 top-6"
             aria-label="Close menu"
             onClick={() => setOpen(false)}
-            style={{ color: "#D4AF37" }}
+            style={{ color: "#1DB8A0" }}
           >
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <line x1="18" y1="6" x2="6" y2="18" />
@@ -110,7 +110,7 @@ export function SiteNav() {
           <img
             src="/assets/skillyme-logo.png"
             alt="Skillyme Africa"
-            style={{ height: 48, width: "auto", marginBottom: 32, display: "block", mixBlendMode: "lighten" }}
+            style={{ height: 56, width: "auto", marginBottom: 32, display: "block" }}
           />
           {links.map((l) => (
             <Link

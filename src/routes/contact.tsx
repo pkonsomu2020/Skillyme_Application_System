@@ -57,7 +57,7 @@ function FaqSection() {
         <h2
           style={{
             fontFamily: "var(--font-display)",
-            color: "#1B4332",
+            color: "#0D1E2C",
             fontWeight: 600,
             fontSize: 42,
             lineHeight: 1.15,
@@ -77,7 +77,7 @@ function FaqSection() {
               <div
                 key={idx}
                 style={{
-                  borderBottom: "1px solid #EDF7F0",
+                  borderBottom: "1px solid #D4EDEA",
                   padding: "28px 0",
                   cursor: "pointer",
                 }}
@@ -97,7 +97,7 @@ function FaqSection() {
                     style={{
                       fontFamily: "var(--font-body)",
                       fontWeight: 500,
-                      color: isHover ? "#2D6A4F" : "#1B4332",
+                      color: isHover ? "#1A2E3C" : "#0D1E2C",
                       fontSize: 17,
                       lineHeight: 1.4,
                       maxWidth: "90%",
@@ -110,7 +110,7 @@ function FaqSection() {
                     style={{
                       fontFamily: "var(--font-display)",
                       fontWeight: 600,
-                      color: "#D4AF37",
+                      color: "#1DB8A0",
                       fontSize: 24,
                       flexShrink: 0,
                       transition: "transform 200ms ease",
@@ -132,7 +132,7 @@ function FaqSection() {
                     style={{
                       fontFamily: "var(--font-body)",
                       fontWeight: 300,
-                      color: "#555555",
+                      color: "#4A6670",
                       fontSize: 16,
                       lineHeight: 1.85,
                       paddingTop: 16,
@@ -152,7 +152,7 @@ function FaqSection() {
             marginTop: 48,
             height: 1,
             width: "100%",
-            background: "#D4AF37",
+            background: "#1DB8A0",
             opacity: 0.2,
           }}
         />
@@ -161,7 +161,7 @@ function FaqSection() {
             fontFamily: "var(--font-body)",
             fontWeight: 300,
             fontStyle: "italic",
-            color: "#555555",
+            color: "#4A6670",
             fontSize: 14,
             padding: "32px 0 0 0",
             textAlign: "center",
@@ -175,6 +175,18 @@ function FaqSection() {
 }
 
 export const Route = createFileRoute("/contact")({
+  head: () => ({
+    meta: [
+      { title: "Contact — Skillyme Africa" },
+      {
+        name: "description",
+        content:
+          "Get in touch with the Skillyme Africa team. Email africaskillyme@gmail.com or send us a message — we reply within one working day.",
+      },
+      { property: "og:title", content: "Contact Skillyme Africa" },
+      { property: "og:description", content: "africaskillyme@gmail.com · Nairobi · Mon–Fri 9:00–18:00 EAT" },
+    ],
+  }),
   component: ContactPage,
 });
 
@@ -206,14 +218,14 @@ function ContactPage() {
             >
               Talk to the team behind Track One.
             </h1>
-            <p className="city-text mt-8" style={{ color: "#D8F3DC", fontWeight: 300, fontSize: 17, lineHeight: 1.9 }}>
+            <p className="city-text mt-8" style={{ color: "#E8F4F2", fontWeight: 300, fontSize: 17, lineHeight: 1.9 }}>
               For questions about the program, your application, partnerships, or the July Gala —
               reach out directly. We reply within one working day.
             </p>
 
-            <div className="mt-10" style={{ height: 1, width: 40, background: "#D4AF37" }} />
+            <div className="mt-10" style={{ height: 1, width: 40, background: "#1DB8A0" }} />
 
-            <div className="mt-8 space-y-5" style={{ color: "#D8F3DC", fontWeight: 300, fontSize: 15 }}>
+            <div className="mt-8 space-y-5" style={{ color: "#E8F4F2", fontWeight: 300, fontSize: 15 }}>
               <div>
                 <div className="gold-label">EMAIL</div>
                 <a href="mailto:africaskillyme@gmail.com" className="story-link mt-1 block" style={{ color: "#fff", fontSize: 17 }}>
@@ -243,21 +255,21 @@ function ContactPage() {
             <div className="gold-label">SEND A MESSAGE</div>
             <h2
               className="mt-4"
-              style={{ fontFamily: "var(--font-display)", color: "#1B4332", fontWeight: 600, fontSize: 32 }}
+              style={{ fontFamily: "var(--font-display)", color: "#0D1E2C", fontWeight: 600, fontSize: 32 }}
             >
               We read every message.
             </h2>
 
             <div className="mt-8 space-y-5">
               <div>
-                <label className="gold-label" style={{ color: "#555" }}>NAME</label>
+                <label className="gold-label" style={{ color: "#4A6670" }}>NAME</label>
                 <input
                   required
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className="mt-2 block w-full"
                   style={{
-                    border: "1px solid #EDF7F0",
+                    border: "1px solid #D4EDEA",
                     background: "#fff",
                     padding: "12px 14px",
                     fontSize: 15,
@@ -267,7 +279,7 @@ function ContactPage() {
                 />
               </div>
               <div>
-                <label className="gold-label" style={{ color: "#555" }}>EMAIL</label>
+                <label className="gold-label" style={{ color: "#4A6670" }}>EMAIL</label>
                 <input
                   required
                   type="email"
@@ -275,7 +287,7 @@ function ContactPage() {
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                   className="mt-2 block w-full"
                   style={{
-                    border: "1px solid #EDF7F0",
+                    border: "1px solid #D4EDEA",
                     background: "#fff",
                     padding: "12px 14px",
                     fontSize: 15,
@@ -285,7 +297,7 @@ function ContactPage() {
                 />
               </div>
               <div>
-                <label className="gold-label" style={{ color: "#555" }}>MESSAGE</label>
+                <label className="gold-label" style={{ color: "#4A6670" }}>MESSAGE</label>
                 <textarea
                   required
                   rows={5}
@@ -293,7 +305,7 @@ function ContactPage() {
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="mt-2 block w-full"
                   style={{
-                    border: "1px solid #EDF7F0",
+                    border: "1px solid #D4EDEA",
                     background: "#fff",
                     padding: "12px 14px",
                     fontSize: 15,
@@ -306,7 +318,7 @@ function ContactPage() {
             </div>
 
             <div className="mt-8 flex items-center justify-between">
-              <div style={{ color: "#555", fontSize: 13, fontWeight: 300, fontStyle: "italic" }}>
+              <div style={{ color: "#4A6670", fontSize: 13, fontWeight: 300, fontStyle: "italic" }}>
                 We respond within 1 working day.
               </div>
               <button type="submit" className="btn-gold">Send Message →</button>
@@ -319,15 +331,14 @@ function ContactPage() {
 
       {/* FINAL APPLY CTA */}
       <section
-        className="city-section city-overlay-72"
+        className="city-light"
         style={{ padding: "140px 24px", textAlign: "center" }}
       >
         <div className="mx-auto max-w-[900px]">
           <h2
-            className="city-heading"
             style={{
               fontFamily: "var(--font-display)",
-              color: "#fff",
+              color: "#0D1E2C",
               fontWeight: 700,
               fontSize: "clamp(40px, 5.5vw, 60px)",
               lineHeight: 1.1,
@@ -335,7 +346,7 @@ function ContactPage() {
           >
             Still reading? You already know this is for you.
           </h2>
-          <p className="city-text mx-auto mt-6" style={{ color: "#D8F3DC", fontWeight: 300, fontSize: 18, maxWidth: 520 }}>
+          <p className="mx-auto mt-6" style={{ color: "#4A6670", fontWeight: 300, fontSize: 18, maxWidth: 520 }}>
             100 spots. May 14 deadline. The Gala will not wait.
           </p>
           <div className="mt-10 flex justify-center">

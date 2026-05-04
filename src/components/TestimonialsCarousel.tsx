@@ -43,6 +43,30 @@ const testimonials: Testimonial[] = [
     review: "I was always coding without direction, but Skillyme Africa gave me an identity. As a Public Health student, being recognized as a top contributor was a defining milestone. The program allowed me to balance my studies while building proficiency in full-stack development—leveraging AI and API architectures for social impact. I am deeply grateful to the team for trusting me and providing this opportunity to bridge the gap between passion and professional expertise.",
     done: true,
   },
+  {
+    id: 5,
+    name: "John Kamau",
+    photo: "/TESTIMONIALS/John_Kamau_Expert_Machine _Learning_Engineer.jpeg",
+    linkedin: "#",
+    review: "I think Skillyme is an innovative platform for knowledge and skills transfer in the IT space. I am proud to have worked with such a motivated and professional team and look forward to more engagement in the future.",
+    done: true,
+  },
+  {
+    id: 6,
+    name: "Victor Chogo",
+    photo: "/TESTIMONIALS/Victor_Chogo.jpeg",
+    linkedin: "https://www.linkedin.com/in/victor-chogo",
+    review: "Skillyme Cohort 1 is the most practical program I've been part of. From day one we were building a real full-stack system not toy projects and by Saturday we had something to actually demo and be proud of. The weekly structure keeps you accountable, the team dynamic pushes you harder than you'd push yourself alone, and the mentorship is genuinely invested in your growth. If you want to level up fast and learn by actually doing, this is the program. I came in as a developer. I'm leaving as an engineer.",
+    done: true,
+  },
+  {
+    id: 7,
+    name: "Yvonne Wangeci",
+    photo: "/TESTIMONIALS/Yvonne_Wangeci.jpeg",
+    linkedin: "https://www.linkedin.com/in/yvonne-wangeci-25664b274",
+    review: "Even though I am an IT student I was just freestyling code with no structure or direction. That when I stumbled upon SkillyMe program I gained hands-on experience building real-world solutions with an amazing team. Together, we developed a system that pushed me to think critically and collaborate effectively. Now I can boldly say that SkillyMe has transformed me from someone who simply writes code into someone who builds systems with purpose, clarity, and confidence, with much stronger understanding of how real development works.",
+    done: true,
+  },
 ];
 
 export function TestimonialsCarousel() {
@@ -85,7 +109,7 @@ export function TestimonialsCarousel() {
       <div
         className="relative overflow-hidden bg-white transition-all duration-500"
         style={{
-          border: "1px solid #EDF7F0",
+          border: "1px solid #D4EDEA",
           padding: "48px 40px",
           minHeight: 320,
         }}
@@ -98,7 +122,7 @@ export function TestimonialsCarousel() {
             right: 24,
             fontSize: 120,
             fontFamily: "Georgia, serif",
-            color: "#EDF7F0",
+            color: "#E6F7F5",
             lineHeight: 1,
             userSelect: "none",
             pointerEvents: "none",
@@ -116,8 +140,8 @@ export function TestimonialsCarousel() {
                 height: 120,
                 borderRadius: "50%",
                 overflow: "hidden",
-                border: "3px solid #D4AF37",
-                background: "#EDF7F0",
+                border: "3px solid #1DB8A0",
+                background: "#E6F7F5",
               }}
             >
               <img
@@ -143,9 +167,9 @@ export function TestimonialsCarousel() {
                 <Star
                   key={i}
                   size={16}
-                  fill="#D4AF37"
-                  stroke="#D4AF37"
-                  style={{ color: "#D4AF37" }}
+                  fill="#1DB8A0"
+                  stroke="#1DB8A0"
+                  style={{ color: "#1DB8A0" }}
                 />
               ))}
             </div>
@@ -173,7 +197,7 @@ export function TestimonialsCarousel() {
                   style={{
                     fontFamily: "var(--font-display)",
                     fontWeight: 600,
-                    color: "#1B4332",
+                    color: "#0D1E2C",
                     fontSize: 18,
                   }}
                 >
@@ -184,9 +208,9 @@ export function TestimonialsCarousel() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-1 inline-flex items-center gap-2 text-sm transition-colors"
-                  style={{ color: "#D4AF37" }}
-                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#c19f2e")}
-                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#D4AF37")}
+                  style={{ color: "#1DB8A0" }}
+                  onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#17a089")}
+                  onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#1DB8A0")}
                 >
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
@@ -207,8 +231,8 @@ export function TestimonialsCarousel() {
           width: 48,
           height: 48,
           borderRadius: "50%",
-          background: "#1B4332",
-          border: "2px solid #D4AF37",
+          background: "#0D1E2C",
+          border: "2px solid #1DB8A0",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -216,16 +240,16 @@ export function TestimonialsCarousel() {
           zIndex: 20,
         }}
         onMouseEnter={(e) => {
-          (e.currentTarget as HTMLElement).style.background = "#2D6A4F";
+          (e.currentTarget as HTMLElement).style.background = "#1A2E3C";
           (e.currentTarget as HTMLElement).style.transform = "translate(-50%, -50%) scale(1.1)";
         }}
         onMouseLeave={(e) => {
-          (e.currentTarget as HTMLElement).style.background = "#1B4332";
+          (e.currentTarget as HTMLElement).style.background = "#0D1E2C";
           (e.currentTarget as HTMLElement).style.transform = "translate(-50%, -50%) scale(1)";
         }}
         aria-label="Previous testimonial"
       >
-        <ChevronLeft size={24} color="#D4AF37" />
+        <ChevronLeft size={24} color="#1DB8A0" />
       </button>
 
       <button
@@ -235,8 +259,8 @@ export function TestimonialsCarousel() {
           width: 48,
           height: 48,
           borderRadius: "50%",
-          background: "#1B4332",
-          border: "2px solid #D4AF37",
+          background: "#0D1E2C",
+          border: "2px solid #1DB8A0",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -244,16 +268,16 @@ export function TestimonialsCarousel() {
           zIndex: 20,
         }}
         onMouseEnter={(e) => {
-          (e.currentTarget as HTMLElement).style.background = "#2D6A4F";
+          (e.currentTarget as HTMLElement).style.background = "#1A2E3C";
           (e.currentTarget as HTMLElement).style.transform = "translate(50%, -50%) scale(1.1)";
         }}
         onMouseLeave={(e) => {
-          (e.currentTarget as HTMLElement).style.background = "#1B4332";
+          (e.currentTarget as HTMLElement).style.background = "#0D1E2C";
           (e.currentTarget as HTMLElement).style.transform = "translate(50%, -50%) scale(1)";
         }}
         aria-label="Next testimonial"
       >
-        <ChevronRight size={24} color="#D4AF37" />
+        <ChevronRight size={24} color="#1DB8A0" />
       </button>
 
       {/* Indicator Dots */}
@@ -267,7 +291,7 @@ export function TestimonialsCarousel() {
               width: currentIndex === index ? 32 : 10,
               height: 10,
               borderRadius: 5,
-              background: currentIndex === index ? "#D4AF37" : "#E0E0E0",
+              background: currentIndex === index ? "#1DB8A0" : "#E0E0E0",
               border: "none",
               cursor: "pointer",
             }}

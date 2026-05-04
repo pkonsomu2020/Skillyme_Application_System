@@ -1,10 +1,22 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect } from "react";
 import { Reveal } from "../components/Reveal";
-import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
-import { updateSEO } from "../lib/seo";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Skillyme Africa — Track One | Apply Now" },
+      {
+        name: "description",
+        content:
+          "A 6-week competitive sprint for African professionals. Real product. Real buyers. Real stakes. 100 spots. Applications close May 14, 2026.",
+      },
+      { property: "og:title", content: "Skillyme Africa — Where African talent stops preparing and starts building." },
+      {
+        property: "og:description",
+        content: "Track One · May 2026 · 100 spots. 5 industries. 6 weeks. One Gala in July.",
+      },
+    ],
+  }),
   component: Index,
 });
 
@@ -15,7 +27,7 @@ function Stat({ n, label }: { n: string; label: string }) {
         style={{
           fontFamily: "var(--font-display)",
           fontWeight: 700,
-          color: "#1B4332",
+          color: "#0D1E2C",
           fontSize: 56,
           lineHeight: 1,
         }}
@@ -24,7 +36,7 @@ function Stat({ n, label }: { n: string; label: string }) {
       </div>
       <div
         className="mt-2"
-        style={{ color: "#555", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase" }}
+        style={{ color: "#4A6670", fontSize: 13, letterSpacing: "0.08em", textTransform: "uppercase" }}
       >
         {label}
       </div>
@@ -33,40 +45,22 @@ function Stat({ n, label }: { n: string; label: string }) {
 }
 
 function Index() {
-  useEffect(() => {
-    updateSEO({
-      title: "Skillyme Africa — Track One | Apply Now",
-      description: "A 6-week competitive sprint for African professionals. Real product. Real buyers. Real stakes. 100 spots. Applications close May 14, 2026.",
-      keywords: "Skillyme Africa, Track One, African professionals, builder program, Kenya, tech training",
-      canonical: "https://apply.skillyme.africa/",
-      ogImage: "https://apply.skillyme.africa/assets/skillyme-logo.png",
-    });
-  }, []);
-
   return (
     <>
       {/* HERO */}
-      <section className="city-section kenburns relative flex min-h-screen items-center">
-        <div className="mx-auto w-full max-w-[1400px] px-6 pt-32 pb-20 md:px-10">
+      <section className="city-section kenburns relative flex min-h-screen items-center justify-center text-center">
+        <div className="mx-auto flex w-full max-w-[1100px] flex-col items-center px-6 pt-32 pb-20 md:px-10">
           <div className="anim-fade-in gold-label city-text">TRACK ONE · MAY 2026 · 100 SPOTS</div>
-
-          <img
-            src="/assets/skillyme-logo.png"
-            alt="Skillyme Africa"
-            className="anim-fade-in"
-            style={{ height: 56, width: "auto", opacity: 0.92, marginTop: 24, marginBottom: 0, display: "block", mixBlendMode: "lighten" }}
-          />
-
 
           <h1
             className="anim-slide-up delay-100 city-heading mt-6"
             style={{
-              fontFamily: "var(--font-hero)",
-              fontWeight: 900,
+              fontFamily: "var(--font-display)",
+              fontWeight: 700,
               color: "#fff",
-              fontSize: "clamp(56px, 8vw, 88px)",
+              fontSize: "clamp(48px, 7.5vw, 84px)",
               lineHeight: 1.05,
-              maxWidth: 720,
+              maxWidth: 900,
             }}
           >
             Where African talent stops preparing and starts building.
@@ -77,29 +71,29 @@ function Index() {
             style={{
               fontFamily: "var(--font-body)",
               fontWeight: 300,
-              color: "#D8F3DC",
+              color: "#E8F4F2",
               fontSize: 18,
-              maxWidth: 520,
-              lineHeight: 1.6,
+              maxWidth: 620,
+              lineHeight: 1.7,
             }}
           >
             A 6-week competitive sprint for African professionals. Real product. Real buyers. Real stakes.
           </p>
 
-          <div className="anim-fade-in delay-600 mt-10 flex flex-wrap items-center gap-4">
+          <div className="anim-fade-in delay-600 mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link to="/apply" className="btn-gold">Apply Now →</Link>
             <Link to="/projects" className="btn-ghost">See the Projects</Link>
           </div>
 
-          <div className="anim-fade-in delay-800 mt-16">
-            <div style={{ height: 1, background: "rgba(212,175,55,0.4)", maxWidth: 360 }} />
+          <div className="anim-fade-in delay-800 mt-16 flex flex-col items-center">
+            <div style={{ height: 1, background: "rgba(29, 184, 160,0.4)", width: 280 }} />
             <p
               className="mt-4 city-text"
               style={{
                 fontFamily: "var(--font-body)",
                 fontWeight: 300,
                 fontStyle: "italic",
-                color: "#D8F3DC",
+                color: "#E8F4F2",
                 fontSize: 15,
               }}
             >
@@ -113,12 +107,12 @@ function Index() {
       <section
         className="bg-white"
         style={{
-          borderTop: "1px solid #EDF7F0",
-          borderBottom: "1px solid #EDF7F0",
+          borderTop: "1px solid #D4EDEA",
+          borderBottom: "1px solid #D4EDEA",
           padding: "40px 0",
         }}
       >
-        <div className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center divide-x" style={{ borderColor: "#EDF7F0" }}>
+        <div className="mx-auto flex max-w-[1100px] flex-wrap items-center justify-center divide-x" style={{ borderColor: "#D4EDEA" }}>
           <Reveal delay={0}><Stat n="100" label="Builder Spots" /></Reveal>
           <Reveal delay={100}><Stat n="5" label="African Industries" /></Reveal>
           <Reveal delay={200}><Stat n="6" label="Weeks to Build" /></Reveal>
@@ -128,70 +122,28 @@ function Index() {
 
       {/* PROGRAM STATEMENT */}
       <section className="bg-white px-6 py-28 md:px-10">
-        <div className="mx-auto max-w-[800px]">
+        <div className="mx-auto max-w-[820px] text-center">
           <Reveal>
             <div className="gold-label">THE PROGRAM</div>
             <h2
               className="mt-4"
-              style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#1B4332", fontSize: 42, lineHeight: 1.15 }}
+              style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#0D1E2C", fontSize: 42, lineHeight: 1.2 }}
             >
               This is not a course. There are no lectures.
             </h2>
-            <p className="mt-8" style={{ fontWeight: 300, color: "#111", fontSize: 18, lineHeight: 1.8 }}>
+            <p className="mt-8 mx-auto" style={{ fontWeight: 300, color: "#111", fontSize: 18, lineHeight: 1.8, maxWidth: 700 }}>
               You join a team of 10. You spend 6 weeks building a real product for a real African industry.
               At the Gala in July, your product is evaluated by external judges and industry buyers.
               The best product wins. The winning team earns 70% of any revenue it generates.
             </p>
-            <p className="mt-6" style={{ fontWeight: 300, color: "#111", fontSize: 18, lineHeight: 1.8 }}>
+            <p className="mt-6 mx-auto" style={{ fontWeight: 300, color: "#111", fontSize: 18, lineHeight: 1.8, maxWidth: 700 }}>
               Every builder who completes the program walks away with something no course gives you —
               a product with their name on it, shown to people who can pay for it.
             </p>
-            <div className="mt-12 flex justify-end">
+            <div className="mt-12 flex justify-center">
               <Link to="/about" className="arrow-cta">Read about the program →</Link>
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section style={{ background: "#EDF7F0", padding: "80px 0" }}>
-        <div className="mx-auto max-w-[1400px] px-6 md:px-10">
-          <Reveal>
-            <div className="text-center">
-              <div className="gold-label">WHAT BUILDERS SAY</div>
-              <h2
-                className="mx-auto mt-4"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontWeight: 600,
-                  color: "#1B4332",
-                  fontSize: 42,
-                  lineHeight: 1.15,
-                  maxWidth: 720,
-                }}
-              >
-                Hear from our previous cohort
-              </h2>
-              <p
-                className="mx-auto mt-4"
-                style={{
-                  fontWeight: 300,
-                  color: "#555",
-                  fontSize: 17,
-                  lineHeight: 1.7,
-                  maxWidth: 640,
-                }}
-              >
-                Real builders. Real results. Real testimonials from those who completed the program.
-              </p>
-            </div>
-          </Reveal>
-
-          <div className="mt-16">
-            <Reveal delay={200}>
-              <TestimonialsCarousel />
-            </Reveal>
-          </div>
         </div>
       </section>
     </>
