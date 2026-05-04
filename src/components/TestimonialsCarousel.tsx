@@ -22,7 +22,7 @@ const testimonials: Testimonial[] = [
   {
     id: 2,
     name: "Maxmillin Muiruri Njuguna",
-    photo: "/TESTIMONIALS/Maxmillian Muiruri Njuguna.jpeg",
+    photo: "/TESTIMONIALS/Maxmillian Muiruri Njuguna1.jpeg",
     linkedin: "https://www.linkedin.com/in/maxmillin-muiruri-njuguna/",
     review: "Being part of the SkillyMe program has been an amazing experience for me. It gave me a chance to grow my skills, work with a great team, and build real projects like PharmX. The collaboration, guidance, and hands-on practice really helped me improve my confidence as a developer. I'm grateful for the opportunity and proud to be part of the Tier 1 contributors.",
     done: true,
