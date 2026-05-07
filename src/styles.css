@@ -327,6 +327,12 @@
 .arrow-cta:hover { gap: 14px; }
 .arrow-cta-dark { color: #0D1E2C; }
 
+/* Rotating animation for team photos */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* Inputs */
 input, textarea, select {
   font-family: var(--font-body);

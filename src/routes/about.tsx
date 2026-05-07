@@ -69,11 +69,6 @@ function AboutPage() {
               Track One is that room.
             </p>
             <div className="mt-10" style={{ height: 1, width: 40, background: "#1DB8A0" }} />
-            <div className="mt-8 space-y-2" style={{ color: "#E8F4F2", fontWeight: 300, fontSize: 15 }}>
-              <div><span style={{ color: "#fff", fontWeight: 500 }}>Fredrick Ochieng</span> · CEO & Track Architect</div>
-              <div><span style={{ color: "#fff", fontWeight: 500 }}>Peter Onsomu</span> · CTO</div>
-              <div><span style={{ color: "#fff", fontWeight: 500 }}>Barry Yaola</span> · COO</div>
-            </div>
           </div>
         </div>
 
