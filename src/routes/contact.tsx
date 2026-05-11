@@ -40,7 +40,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "I have a question not answered here — how do I reach you?",
-    a: "Send us an email at africaskillyme@gmail.com or WhatsApp us on +254 745 266 526, Monday to Friday, 8:00am – 5:00pm EAT. You can also use the contact form above on this page. We respond to every message within one business day. We would rather you ask and apply informed than not apply at all.",
+    a: "Send us an email at info@skillyme.africa or WhatsApp us on +254 745 266 526, Monday to Friday, 8:00am – 5:00pm EAT. You can also use the contact form above on this page. We respond to every message within one business day. We would rather you ask and apply informed than not apply at all.",
   },
 ];
 
@@ -167,7 +167,7 @@ function FaqSection() {
             textAlign: "center",
           }}
         >
-          Still have a question? Use the form above or email us directly at africaskillyme@gmail.com
+          Still have a question? Use the form above or email us directly at info@skillyme.africa
         </div>
       </div>
     </section>
@@ -181,10 +181,10 @@ export const Route = createFileRoute("/contact")({
       {
         name: "description",
         content:
-          "Get in touch with the Skillyme Africa team. Email africaskillyme@gmail.com or send us a message — we reply within one working day.",
+          "Get in touch with the Skillyme Africa team. Email info@skillyme.africa or send us a message — we reply within one working day.",
       },
       { property: "og:title", content: "Contact Skillyme Africa" },
-      { property: "og:description", content: "africaskillyme@gmail.com · Nairobi · Mon–Fri 9:00–18:00 EAT" },
+      { property: "og:description", content: "info@skillyme.africa · Nairobi · Mon–Fri 9:00–18:00 EAT" },
     ],
   }),
   component: ContactPage,
@@ -199,7 +199,7 @@ function ContactPage() {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
     );
-    window.location.href = `mailto:africaskillyme@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:info@skillyme.africa?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -228,8 +228,8 @@ function ContactPage() {
             <div className="mt-8 space-y-5" style={{ color: "#E8F4F2", fontWeight: 300, fontSize: 15 }}>
               <div>
                 <div className="gold-label">EMAIL</div>
-                <a href="mailto:africaskillyme@gmail.com" className="story-link mt-1 block" style={{ color: "#fff", fontSize: 17 }}>
-                  africaskillyme@gmail.com
+                <a href="mailto:info@skillyme.africa" className="story-link mt-1 block" style={{ color: "#fff", fontSize: 17 }}>
+                  info@skillyme.africa
                 </a>
               </div>
               <div>

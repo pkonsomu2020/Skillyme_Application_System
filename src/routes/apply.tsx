@@ -174,7 +174,7 @@ function ApplyPage() {
           >
             {iframeFailed ? (
               <div className="text-center" style={{ padding: 60, color: "#4A6670", fontWeight: 300, fontSize: 16 }}>
-                The form is temporarily unavailable. Please email africaskillyme@gmail.com or open the form directly.
+                The form is temporarily unavailable. Please email info@skillyme.africa or open the form directly.
                 <div className="mt-6">
                   <a className="btn-gold" href="https://tally.so/r/Y5oNK6" target="_blank" rel="noopener noreferrer">
                     Open Form →
@@ -205,7 +205,7 @@ function ApplyPage() {
               You will not be charged until you receive an acceptance email and confirm your spot.
             </div>
             <div style={{ color: "#4A6670", fontWeight: 300, fontSize: 13 }}>
-              Questions? Email africaskillyme@gmail.com
+              Questions? Email info@skillyme.africa
             </div>
           </div>
         </div>

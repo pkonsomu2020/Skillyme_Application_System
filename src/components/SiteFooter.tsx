@@ -38,7 +38,7 @@ export function SiteFooter() {
         <div>
           <div className="gold-label mb-4">Contact</div>
           <p className="text-[14px]" style={{ color: "#E8F4F2", fontWeight: 300, lineHeight: 1.8 }}>
-            africaskillyme@gmail.com<br />
+            info@skillyme.africa<br />
             +254 745 266 526<br />
             Nairobi, Kenya<br />
             Mon–Fri · 9:00 – 18:00 EAT
