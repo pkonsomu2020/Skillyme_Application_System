@@ -129,19 +129,19 @@ function ApplyPage() {
             <div className="hidden items-stretch md:flex">
               <Step n="01" title="APPLY" detail="Complete this form. 10–15 minutes." />
               <div style={{ alignSelf: "center", color: "#1DB8A0", opacity: 0.5, fontSize: 24, fontFamily: "var(--font-display)" }}>→</div>
-              <Step n="02" title="STAGE 1" detail="20-min interview. May 18–21." />
+              <Step n="02" title="STAGE 1" detail="20-min interview." />
               <div style={{ alignSelf: "center", color: "#1DB8A0", opacity: 0.5, fontSize: 24, fontFamily: "var(--font-display)" }}>→</div>
-              <Step n="03" title="STAGE 2" detail="15-min founder call. May 22–23." />
+              <Step n="03" title="STAGE 2" detail="15-min founder call." />
               <div style={{ alignSelf: "center", color: "#1DB8A0", opacity: 0.5, fontSize: 24, fontFamily: "var(--font-display)" }}>→</div>
-              <Step n="04" title="BEGIN" detail="Pay Ksh 5,000. Sprint starts May 25." />
+              <Step n="04" title="BEGIN" detail="Pay Ksh 5,000. Sprint starts June 2." />
             </div>
             {/* Mobile vertical */}
             <div className="md:hidden">
               {[
                 { n: "01", t: "APPLY", d: "Complete this form. 10–15 minutes." },
-                { n: "02", t: "STAGE 1", d: "20-min interview. May 18–21." },
-                { n: "03", t: "STAGE 2", d: "15-min founder call. May 22–23." },
-                { n: "04", t: "BEGIN", d: "Pay Ksh 5,000. Sprint starts May 25." },
+                { n: "02", t: "STAGE 1", d: "20-min interview." },
+                { n: "03", t: "STAGE 2", d: "15-min founder call." },
+                { n: "04", t: "BEGIN", d: "Pay Ksh 5,000. Sprint starts June 2." },
               ].map((s, i, arr) => (
                 <div key={s.n} className="py-5" style={{ borderBottom: i < arr.length - 1 ? "1px solid rgba(29, 184, 160,0.3)" : "none" }}>
                   <Step n={s.n} title={s.t} detail={s.d} />
@@ -223,12 +223,12 @@ function ApplyPage() {
 
           <div className="relative mt-12 pl-8" style={{ borderLeft: "1px solid #1DB8A0" }}>
             {[
-              { d: "May 14, 2026", t: "Applications close" },
-              { d: "May 18 – May 21", t: "Stage 1 interviews" },
-              { d: "May 22 – May 23", t: "Stage 2 founder calls" },
-              { d: "May 24", t: "Acceptance + payment confirmation" },
-              { d: "May 25, 2026", t: "Track One sprint begins" },
-              { d: "July 3, 2026", t: "Skillyme Africa Gala — judges and buyers in the room" },
+              { d: "May 30, 2026", t: "Applications close" },
+              { d: "Stage 1", t: "20-min interviews" },
+              { d: "Stage 2", t: "15-min founder calls" },
+              { d: "Acceptance", t: "Payment confirmation" },
+              { d: "June 2, 2026", t: "Track One sprint begins" },
+              { d: "July 9-10, 2026", t: "Skillyme Africa Gala — judges and buyers in the room" },
             ].map((e) => (
               <Reveal key={e.d}>
                 <div className="relative mb-8">

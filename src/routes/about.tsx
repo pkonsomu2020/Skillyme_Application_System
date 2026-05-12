@@ -63,24 +63,33 @@ function TeamCard({
   role,
   bio,
   photo,
+  linkedin,
 }: {
   name: string;
   role: string;
   bio: string;
   photo?: string;
+  linkedin?: string;
 }) {
   return (
     <div
-      className="flex flex-col"
-      style={{ background: "#fff", border: "1px solid #E0E0E0", padding: "32px 28px" }}
+      className="group relative overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+      style={{
+        borderRadius: 12,
+        background: "#1a1a1a",
+        maxWidth: 320,
+        margin: "0 auto",
+        width: "100%",
+      }}
     >
+      {/* Photo Section */}
       <div
         style={{
           width: "100%",
-          aspectRatio: "1 / 1",
+          aspectRatio: "4 / 5",
           background: "#D4EDEA",
-          marginBottom: 24,
           overflow: "hidden",
+          position: "relative",
         }}
       >
         {photo ? (
@@ -113,31 +122,55 @@ function TeamCard({
           </div>
         )}
       </div>
-      <h3
+
+      {/* Dark Overlay Section */}
+      <div
         style={{
-          fontFamily: "var(--font-display)",
-          color: "#0D1E2C",
-          fontWeight: 600,
-          fontSize: 22,
-          lineHeight: 1.2,
+          background: "#1a1a1a",
+          padding: "20px 18px",
         }}
       >
-        {name}
-      </h3>
-      <div
-        className="mt-1"
-        style={{ color: "#1DB8A0", fontSize: 13, fontWeight: 500, letterSpacing: "0.08em", textTransform: "uppercase" }}
-      >
-        {role}
-      </div>
-      <p className="mt-4" style={{ color: "#4A6670", fontWeight: 300, fontSize: 14.5, lineHeight: 1.7 }}>
-        {bio}
-      </p>
-      <div
-        className="mt-5"
-        style={{ color: "#4A6670", fontSize: 13, fontStyle: "italic" }}
-      >
-        LinkedIn — coming soon
+        <h3
+          style={{
+            fontFamily: "var(--font-display)",
+            color: "#fff",
+            fontWeight: 700,
+            fontSize: 20,
+            lineHeight: 1.2,
+            marginBottom: 4,
+          }}
+        >
+          {name}
+        </h3>
+        <div
+          style={{
+            color: "#1DB8A0",
+            fontSize: 10,
+            fontWeight: 600,
+            letterSpacing: "0.12em",
+            textTransform: "uppercase",
+            marginBottom: 10,
+          }}
+        >
+          {role}
+        </div>
+        
+        {linkedin && (
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 transition-colors"
+            style={{ color: "#1DB8A0", fontSize: 12, textDecoration: "none" }}
+            onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#fff")}
+            onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#1DB8A0")}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+            LinkedIn
+          </a>
+        )}
       </div>
     </div>
   );
@@ -245,18 +278,26 @@ function AboutPage() {
           </div>
         </Reveal>
 
-        <div className="mx-auto mt-12 grid max-w-[1200px] grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mx-auto mt-12 grid max-w-[1000px] grid-cols-1 gap-5 md:grid-cols-3">
           <TeamCard
             name="Fredrick Ochieng"
             role="Founder & CEO"
             bio="Fredrick founded Skillyme Africa to build the commercial proving ground he wished existed for African professionals. Track One is his answer to the gap between what Africans know and what the market sees."
             photo="/fred_ochieng.jpeg"
+            linkedin="https://www.linkedin.com/in/fredrick-ochieng-99724a378"
           />
           <TeamCard
             name="Peter Onsomu"
             role="CTO"
             bio="Peter leads the technical architecture of Track One, ensuring that every team has the infrastructure and support needed to build, test, and ship real products in six weeks."
             photo="/Peter_Onsomu.jpg"
+            linkedin="https://www.linkedin.com/in/peter-onsomu-695593264/"
+          />
+          <TeamCard
+            name="Dancun Santiago"
+            role="Operations Lead"
+            bio="Bio coming soon."
+            linkedin="https://www.linkedin.com/in/dan-k-290359182"
           />
         </div>
       </section>
@@ -301,7 +342,7 @@ function AboutPage() {
           <DifferenceItem
             n="04"
             title="We put your work in front of real buyers."
-            body="At the Gala on July 2–3, industry buyers, investors, and employers evaluate what your team built. Commercial agreements are signed on the spot. You are not presenting to a panel of lecturers. You are presenting to people who can pay for what you built."
+            body="At the Gala on July 9-10, industry buyers, investors, and employers evaluate what your team built. Commercial agreements are signed on the spot. You are not presenting to a panel of lecturers. You are presenting to people who can pay for what you built."
           />
           <DifferenceItem
             n="05"
@@ -431,8 +472,8 @@ function AboutPage() {
               className="mt-6 space-y-1"
               style={{ color: "#4A6670", fontSize: 14, fontWeight: 400 }}
             >
-              <div>Sprint: May 25 – June 28, 2026</div>
-              <div>Gala: July 2–3, 2026, Nairobi</div>
+              <div>Sprint: June 2 – July 8, 2026</div>
+              <div>Gala: July 9-10, 2026, Nairobi</div>
             </div>
           </div>
         </Reveal>

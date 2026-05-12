@@ -384,8 +384,8 @@ function Index() {
             <Reveal><TimelineStep n="3" title="Acceptance" body="If you are selected, you receive a formal acceptance from Skillyme Africa." /></Reveal>
             <Reveal><TimelineStep n="4" title="Pay (only now)" body="Ksh 5,000 — paid at acceptance, and only at acceptance. If you are not selected, you pay nothing." /></Reveal>
             <Reveal><TimelineStep n="5" title="Join your team" body="A team of 10. 5 technical, 5 non-technical professionals. Assigned to one of five industry tracks: real estate, logistics, agriculture, workforce management, or SME finance." /></Reveal>
-            <Reveal><TimelineStep n="6" title="Build for 6 weeks" body="June 2 – July 12, 2026. Two check-ins per week — Wednesday and Saturday. 10–15 hours per week. Built for people with full-time jobs." /></Reveal>
-            <Reveal><TimelineStep n="7" title="The Gala" body="July 2–3, Nairobi. Both teams present. Buyers, investors, and employers evaluate what you built. Commercial agreements signed on the spot." /></Reveal>
+            <Reveal><TimelineStep n="6" title="Build for 6 weeks" body="June 2 – July 8, 2026. Two check-ins per week — Wednesday and Saturday. 10–15 hours per week. Built for people with full-time jobs." /></Reveal>
+            <Reveal><TimelineStep n="7" title="The Gala" body="July 9-10, Nairobi. Both teams present. Buyers, investors, and employers evaluate what you built. Commercial agreements signed on the spot." /></Reveal>
             <Reveal><TimelineStep n="8" title="Keep your share" body="70% if you win. 5% if you place second. Everything else regardless." isLast /></Reveal>
           </div>
         </div>
@@ -407,7 +407,7 @@ function Index() {
                 maxWidth: 820,
               }}
             >
-              The Skillyme Africa Gala — July 2–3, Nairobi
+              The Skillyme Africa Gala — July 9-10, Nairobi
             </h2>
             <div className="mt-10" style={{ maxWidth: 740 }}>
               <p style={{ fontWeight: 300, color: "#D8F3DC", fontSize: 17, lineHeight: 1.9 }}>
@@ -565,8 +565,8 @@ function Index() {
             }}
           >
             <div>Applications close May 30, 2026.</div>
-            <div>Sprint: June 2 – July 12, 2026.</div>
-            <div>Gala: July 2–3, 2026, Nairobi.</div>
+            <div>Sprint: June 2 – July 8, 2026.</div>
+            <div>Gala: July 9-10, 2026, Nairobi.</div>
           </div>
         </div>
       </section>

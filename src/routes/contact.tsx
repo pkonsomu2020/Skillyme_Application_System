@@ -16,7 +16,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What is the Gala and who attends?",
-    a: "The Skillyme Africa Gala takes place on July 2–3, 2026. It is a live product showcase where all five teams present their work to an audience of industry buyers, investors, and professionals relevant to each track. Judges evaluate each product on commercial viability, execution quality, and market readiness. The winning product per industry is considered for purchase or piloting by attending buyers.",
+    a: "The Skillyme Africa Gala takes place on July 9-10, 2026. It is a live product showcase where all five teams present their work to an audience of industry buyers, investors, and professionals relevant to each track. Judges evaluate each product on commercial viability, execution quality, and market readiness. The winning product per industry is considered for purchase or piloting by attending buyers.",
   },
   {
     q: "What does the winning team actually earn — and how does revenue work?",
