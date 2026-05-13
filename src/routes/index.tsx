@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Reveal } from "../components/Reveal";
 import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 
@@ -542,15 +542,13 @@ function Index() {
             If you have read this far, you are probably the person this program is for.
           </p>
           <div className="mt-10">
-            <a
-              href={APPLY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/apply"
               className="btn-gold"
               style={{ padding: "18px 48px", fontSize: 17 }}
             >
               Apply for Track One →
-            </a>
+            </Link>
           </div>
           <PayNote light />
           <div
